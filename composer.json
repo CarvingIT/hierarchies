@@ -1,0 +1,19 @@
+{
+    "name": "carving-i-t/hierarchies",
+    "description": "Management of organizational hierarchies in your Laravel app.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CarvingIT\\Hierarchies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ketan Kulkarni",
+            "email": "ketan@carvingit.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
