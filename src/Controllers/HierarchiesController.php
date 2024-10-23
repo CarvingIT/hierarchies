@@ -8,7 +8,8 @@ use CarvingIT\Hierarchies\Models\PositionUser;
 class HierarchiesController
 {
     public function index(Request $request){
-        return view('hierarchies::index');
+        //return view('hierarchies::index');
+        return view('vendor.hierarchies.index');
     }
 
     public function addPosition(Request $request){

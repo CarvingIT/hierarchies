@@ -17,6 +17,8 @@ class HierarchiesServiceProvider extends ServiceProvider{
 
         $this->publishes([
             __DIR__.'/config/hierarchies.php' => config_path('hierarchies.php'),
+            __DIR__.'/public' => public_path('vendor/hierarchies'),
+            __DIR__.'/views' => resource_path('views/vendor/hierarchies'),
         ]);
 
         $this->publishesMigrations([
