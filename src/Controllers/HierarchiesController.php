@@ -14,9 +14,14 @@ class HierarchiesController
     public function addPosition(Request $request){
         $position = new Position;
         $position->label = $request->label;
-        $position->reports_to = empty($request->reports_to)? null : $request->reports_to;
+        $position->reports_to = $request->reports_to;
         $position->save();
-        return redirect(route('hierarchies'));
+        return redirect()->back();
+    }
+
+    public function removePosition(Request $request){
+       Position::find($request->position_id)->delete();
+        return redirect()->back();
     }
 }
 

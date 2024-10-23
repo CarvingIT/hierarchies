@@ -2,7 +2,7 @@
     details{
         margin-left:20px;
     }
-    p.child{
+    .child{
         margin-left:20px;
     }
     form.hidden{
@@ -21,6 +21,9 @@
     }
     a{
         text-decoration:none;         
+    }
+    button{
+    margin-left:20px;
     }
 
 </style>
@@ -64,13 +67,21 @@
                     echo "<article>";
                     if(count($p->reports) > 0){
                         echo "<details>";
-                        echo "<summary>".$p->label."</summary>"; 
+                        echo "<summary>".$p->label.
+                        ' <button title="Add reporting position" onclick="javascript:toggleForm(\''.$p->id.'\')" id="button-'.$p->id.'">+</button></p>'.
+                        "</summary>"; 
                         makeTree($positions, $p->id);
                         echo "</details>";
                     }
                     else{
-                        echo '<p class="child">'.$p->label.
-                        '<a title="Add reporting position" href="javascript:toggleForm(\''.$p->id.'\')" id="button-'.$p->id.'">+</a></p>';
+                        echo '<div class="child">'.$p->label.
+                        ' <button title="Add reporting position" onclick="javascript:toggleForm(\''.$p->id.'\')" id="button-'.$p->id.'">+</button>
+                        <form method="post" action="'.route('remove_position').'" style="display:inline-block;">
+                        <input type="hidden" name="position_id" value="'.$p->id.'" />
+                        <input type="hidden" name="_token" value="'. csrf_token(). '" />
+                        <input type="submit" title="Remove this position" value="x" />
+                        </form>
+                        </div>';
                     }
                     echo "</article>";
                 }

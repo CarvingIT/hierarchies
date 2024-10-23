@@ -2,10 +2,7 @@
 
     use CarvingIT\Hierarchies\Controllers\HierarchiesController;
 
-    Route::get('xyz', function (){
-    return 'hello';
-    });
-
-    Route::get('hierarchies', [HierarchiesController::class, 'index'])->name('hierarchies');
-    Route::post('hierarchies/add_position',[HierarchiesController::class, 'addPosition'])->name('add_position');
+        Route::get('/', [HierarchiesController::class, 'index'])->name('hierarchies');
+        Route::post('/add_position',[HierarchiesController::class, 'addPosition'])->name('add_position');
+        Route::post('/remove_position', [HierarchiesController::class, 'removePosition'])->name('remove_position');
 ?>

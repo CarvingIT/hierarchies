@@ -18,6 +18,8 @@ class Hierarchy extends Migration
             $table->string('label');
             $table->integer('reports_to')->nullable();
             $table->timestamps();
+
+            $table->unique(['label', 'reports_to']);
         });
 
         Schema::create('position_users', function(Blueprint $table) {
