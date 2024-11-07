@@ -13,4 +13,6 @@ Configuration
 
 config/hierarchies.php can be edited to adjust two settings.
     1. base_path
-    2. middleware[s] that apply to this module. 
+    2. fontawesome_path that is relative to the document root of your application 
+    3. middleware[s] that apply to this module. 
+    
