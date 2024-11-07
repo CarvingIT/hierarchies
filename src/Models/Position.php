@@ -12,4 +12,8 @@ class Position extends Model
     public function reports(){
         return $this->hasMany(Position::class,'reports_to');
     }
+
+    public function positionusers(){
+        return $this->hasMany(PositionUser::class);
+    }
 }
