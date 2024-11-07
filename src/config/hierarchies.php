@@ -1,7 +1,11 @@
 <?php
     return [
-        // change the following path to make the package accessible at the path you want
+        // Change the following path to make the package accessible at the path you want.
+        // All routes of this package will have the following prefix.
         'base_path'=>'/admin/hierarchies', 
+
+        // Path where fontawesome is. This should be relative to your document root / public
+        'fontawesome_path' => '/assets/fontawesome',
 
         // use a full path of your custom middleware[s]
         // e.g. \App\Http\Middleware\Admin::class
