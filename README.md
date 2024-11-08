@@ -1,6 +1,14 @@
 # Hierarchies
 Composer package for managing hierarchies within your application
 
+## Installation
+
+    composer require carving-i-t/hierarchies 
+
+    php artisan vendor:publish --provider="CarvingIT\Hierarchies\HierarchiesServiceProvider"
+
+    php artisan migrate
+
 ## Views 
 
 To include hierarchies in your view (that has the header/footer and navs), just include the view.
