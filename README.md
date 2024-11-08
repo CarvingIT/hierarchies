@@ -5,7 +5,7 @@ Composer package for managing hierarchies within your application
 
     composer require carving-i-t/hierarchies 
 
-    php artisan vendor:publish --provider="CarvingIT\Hierarchies\HierarchiesServiceProvider"
+    php artisan vendor:publish --provider="CarvingIT\Hierarchies\HierarchiesServiceProvider" --tag="config|views|assets"
 
     php artisan migrate
 
