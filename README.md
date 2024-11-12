@@ -9,6 +9,11 @@ Composer package for managing hierarchies within your application
 
     php artisan migrate
 
+The package downloads font-awesome under vendor/components. Create a symbolic link pointing to that under public/. 
+
+    cd public/assets
+    ln -s ../../vendor/components/font-awesome
+
 ## Views 
 
 To include hierarchies in your view (that has the header/footer and navs), just include the view.

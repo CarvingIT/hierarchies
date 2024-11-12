@@ -5,7 +5,7 @@
         'base_path'=>'/admin/hierarchies', 
 
         // Path where fontawesome is. This should be relative to your document root / public
-        'fontawesome_path' => '/assets/fontawesome',
+        'fontawesome_path' => '/assets/font-awesome',
 
         // use a full path of your custom middleware[s]
         // e.g. \App\Http\Middleware\Admin::class
