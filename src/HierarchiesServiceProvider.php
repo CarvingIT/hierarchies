@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\Config;
 class HierarchiesServiceProvider extends ServiceProvider{
     public function boot(){
 
-        $this->publishes( [ __DIR__.'/config/hierarchies.php' => config_path('hierarchies.php')], 'config');
+        $this->publishes( [ __DIR__.'/config/hierarchies.php' => config_path('hierarchies.php')], 'hierarchies-config');
 
-        $this->publishes([ __DIR__.'/public' => public_path('vendor/hierarchies')], 'assets');
+        $this->publishes([ __DIR__.'/public' => public_path('vendor/hierarchies')], 'hierarchies-assets');
 
-        $this->publishes([ __DIR__.'/views' => resource_path('views/vendor/hierarchies')], 'views');
+        $this->publishes([ __DIR__.'/views' => resource_path('views/vendor/hierarchies')], 'hierarchies-views');
 
-        $this->publishes([ __DIR__.'/database/migrations' => database_path('migrations')], 'migrations');
+        $this->publishes([ __DIR__.'/database/migrations' => database_path('migrations')], 'hierarchies-migrations');
 
         $base_path = Config::get('hierarchies.base_path');
         $middleware = Config::get('hierarchies.middleware');
