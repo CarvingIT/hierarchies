@@ -1,5 +1,5 @@
 # Hierarchies
-Composer package for managing hierarchies within your application
+Laravel package for managing hierarchies within your application
 
 ## Installation
 
