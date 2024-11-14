@@ -13,4 +13,8 @@ class PositionUser extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function userAttributes(){
+        return empty($this->user_attributes) ? null : json_decode($this->user_attributes);
+    }
 }

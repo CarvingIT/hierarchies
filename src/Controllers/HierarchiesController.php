@@ -36,6 +36,12 @@ class HierarchiesController
         $position_user = new PositionUser;
         $position_user->position_id = $request->position_id;
         $position_user->user_id = $u->id;
+        $attributes = [];
+        for($i=0; $i < count($request->att_name); $i++) {
+           if(empty($request->att_name[$i])) continue;
+           $attributes[$request->att_name[$i]] = $request->att_val[$i]; 
+        }
+        $position_user->user_attributes = json_encode($attributes);
         $position_user->save();
         }
         catch(\Exception $e){
